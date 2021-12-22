@@ -8,10 +8,18 @@
 
 import React from "react";
 
+import { SafeAreaView } from "react-native";
+
 import Home from "./src/pages/home/Home";
 
+import styles from "./src/styles/globalStyles";
+
 const App = () => {
-  return <Home />;
+  return (
+    <SafeAreaView style={styles.main}>
+      <Home />
+    </SafeAreaView>
+  );
 };
 
 export default App;
