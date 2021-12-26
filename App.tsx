@@ -8,7 +8,7 @@
 
 import React from "react";
 
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 
 import Home from "./src/pages/home/Home";
 
@@ -17,6 +17,7 @@ import styles from "./src/styles/globalStyles";
 const App = () => {
   return (
     <SafeAreaView style={styles.main}>
+      <StatusBar barStyle={"light-content"} backgroundColor={"#2b2b2b"} />
       <Home />
     </SafeAreaView>
   );

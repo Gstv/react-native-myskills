@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Text, FlatList, View, Alert } from "react-native";
 
@@ -16,6 +16,7 @@ interface Skill {
 function Home() {
   const [skills, setSkills] = useState<Skill[]>([]);
   const [newSkill, setNewSkill] = useState("");
+  const [greetings, setGreetings] = useState("");
 
   const alertModal = (title: string, text: string) => Alert.alert(title, text);
 
@@ -58,11 +59,20 @@ function Home() {
     setSkills(skillFiltered);
   }
 
+  useEffect(() => {
+    const currentHours = new Date().getHours();
+
+    if (currentHours >= 0 && currentHours < 12) setGreetings("Good Morning");
+    else if (currentHours >= 12 && currentHours < 18)
+      setGreetings("Good Afternoon");
+    else setGreetings("Good Night");
+  }, []);
+
   return (
     <View style={styles.container}>
       <View style={styles.section}>
         <Text style={styles.title}>Welcome, Gustavo!</Text>
-        <Text style={styles.text}>Good morning</Text>
+        <Text style={styles.text}>{greetings}</Text>
       </View>
 
       <View style={styles.section}>
