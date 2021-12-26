@@ -12,7 +12,7 @@ Reprodução de um aplicativo construído no Chapter 1 do curso Ignite (Trilha d
 
 ## Imagens:
 
-![Screenshot](./src/assets/Captura_de_tela_2021-12-26 163137.png)
+![Screenshot](./src/assets/Screenshot.png)
 
 ## Comandos
 
