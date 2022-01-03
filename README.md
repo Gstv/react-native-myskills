@@ -55,6 +55,7 @@ yarn android
 [comment]: # "Use ✅ para positivo e ❌ para negativo"
 
 &#9989; Stylesheet\
+&#9989; FlatList\
 &#9989; SafeAreaView\
 &#9989; StatusBar\
 &#9989; TouchableOpacity\
